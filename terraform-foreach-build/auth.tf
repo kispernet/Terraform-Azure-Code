@@ -1,11 +1,11 @@
 terraform {
     backend "s3" {
-    bucket         = "hf-test-sheik"
+    bucket         = "naim-master"
     key            = "terraform/azure/vm/foreach/terraform.tfstate"
     region         = "us-east-1"
     # dynamodb_table = "terraform-state-locks"
     encrypt        = true
-    profile        = "dev"
+    profile        = "naim-sso"
   }
 #   backend "azurerm" {
 #     resource_group_name  = "test"
@@ -15,7 +15,4 @@ terraform {
 #   }
 # }
 
-#Configure the Azure Provider
-provider "azurerm" {
-  features {}
 }

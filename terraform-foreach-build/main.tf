@@ -1,3 +1,7 @@
+provider "azurerm" {
+  features {}
+}
+
 locals {
   prefix     = "terraform"
   location1  = "eastus"
